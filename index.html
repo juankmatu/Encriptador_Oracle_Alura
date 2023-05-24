@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Encriptador | Oracle + Alura</title>
+    <meta name="keywords" content="Encriptador, Oracle, Alura, Proyecto">
+    <meta name="title" content="Encriptador | Oracle + Alura">
+    <meta name="description" content="Proyecto propuesto por ONE (Oracle Next Education) + Alura utilizando HTML, Css y Javascript">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Encriptador | Oracle + Alura">
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:title" content="Encriptador | Oracle + Alura">
+    <meta property="twitter:description" content="Proyecto propuesto por ONE (Oracle Next Education) + Alura utilizando HTML, SASS y Javascript">
+    <meta name="author" content="PatrickWebs">
+    <link rel="icon" href="./favicon/favicon-32.png" sizes="32x32">
+    <link rel="icon" href="./favicon/favicon-128.png" sizes="128x128">
+    <link rel="icon" href="./favicon/favicon-180.png" sizes="180x180">
+    <link rel="shortcut icon" sizes="196x196" href="./favicon/favicon-196.png">
+    <link rel="apple-touch-icon" href="./favicon/favicon-120.png" sizes="120x120">
+    <link rel="apple-touch-icon" href="./favicon/favicon-152.png" sizes="152x152">
+    <link rel="apple-touch-icon" href="./favicon/favicon-180.png" sizes="180x180">
+    <link rel="stylesheet" href="style.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <main class="main">
+        <section class="main__logo">
+            <h1 class="main__h1"><img class="main__img" src="img/logo.svg" alt="Alura Logo"></h1>
+        </section>
+        <section class="main__form">
+            <textarea class="main__textarea" name="mensaje" id="mensaje" placeholder="Ingrese el texto aqui"></textarea>
+            <div class="main__footer">
+                <div class="main__small">
+                    <small>Solo letras minúsculas y sin acentos</small>
+                </div>
+                <div class="main__buttons">
+                    <button class="main__button main__button-primary" id="encriptar">Encriptar</button>
+                    <button class="main__button main__button-secondary" id="desencriptar">Desencriptar</button>
+                </div>
+            </div>
+        </section>
+        <aside class="aside">
+            <section class="aside__content" id="ningunMensaje">
+                <div class="aside__img">
+                    <img src="img/muneco.svg" alt="Ningun mensaje encontrado - imagen">
+                </div>
+                <div class="aside__text aside__none">
+                    <h2 class="aside__h2">Ningún mensaje fue encontrado</h2>
+                    <p class="aside__p">Ingresa el texto que desees encriptar o desencriptar</p>
+                </div>
+            </section>
+            <section class="aside__content aside__content-between aside__content--none" id="mensajeEncontrado">
+                <div class="aside__message">
+                    <p class="aside__encrypt" id="mensajeEncriptado">Hola</p>
+                </div>
+                <button class="aside__button bubbly-button" id="copiarMensaje">Copiar</button>
+            </section>
+        </aside>
+    </main>
+
+    <div class="modal" id="modal">
+        <div class="modal__container">
+            <div class="modal__header">
+                <h3 class="modal__title">Error</h3>
+            </div>
+            <div class="modal__body">
+                <p class="modal__p">El texto no puede contener mayusculas y/o caracteres especiales</p>
+            </div>
+            <div class="modal__footer">
+                <button class="modal__button" id="modalButton">Entendido</button>
+            </div>
+        </div>
+    </div>
+    <script src="main.js"></script>
+</body>
+</html>
